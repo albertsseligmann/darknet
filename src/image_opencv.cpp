@@ -881,7 +881,7 @@ void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, float thresh, 
                 }
             }
             if (class_id >= 0) {
-                int width = std::max(1.0f, show_img->rows * .002f);
+                int width = 2;//std::max(1.0f, show_img->rows * .002f);
 
                 //if(0){
                 //width = pow(prob, 1./2.)*10+1;
@@ -970,10 +970,10 @@ void draw_detections_cv_v3(mat_cv* mat, detection *dets, int num, float thresh, 
                 else
                     printf("\n");
 
-                cv::rectangle(*show_img, pt_text_bg1, pt_text_bg2, color, width, 8, 0);
-                cv::rectangle(*show_img, pt_text_bg1, pt_text_bg2, color, CV_FILLED, 8, 0);    // filled
-                cv::Scalar black_color = CV_RGB(0, 0, 0);
-                cv::putText(*show_img, labelstr, pt_text, cv::FONT_HERSHEY_COMPLEX_SMALL, font_size, black_color, 2 * font_size, CV_AA);
+                //cv::rectangle(*show_img, pt_text_bg1, pt_text_bg2, color, width, 8, 0);
+                //cv::rectangle(*show_img, pt_text_bg1, pt_text_bg2, color, CV_FILLED, 8, 0);    // filled
+                //cv::Scalar black_color = CV_RGB(0, 0, 0);
+                //cv::putText(*show_img, labelstr, pt_text, cv::FONT_HERSHEY_COMPLEX_SMALL, font_size, black_color, 2 * font_size, CV_AA);
                 // cv::FONT_HERSHEY_COMPLEX_SMALL, cv::FONT_HERSHEY_SIMPLEX
             }
         }

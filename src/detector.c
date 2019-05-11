@@ -268,7 +268,7 @@ void train_detector(char *datacfg, char *cfgfile, char *weightfile, int *gpus, i
 
         //if (i % 1000 == 0 || (i < 1000 && i % 100 == 0)) {
         //if (i % 100 == 0) {
-        if (i >= (iter_save + 1000) || i % 1000 == 0) {
+        if (i >= (iter_save + 100) || i % 100 == 0) {
             iter_save = i;
 #ifdef GPU
             if (ngpus != 1) sync_nets(nets, ngpus, 0);
@@ -959,7 +959,7 @@ float validate_detector_map(char *datacfg, char *cfgfile, char *weightfile, floa
 
         // MS COCO - uses 101-Recall-points on PR-chart.
         // PascalVOC2007 - uses 11-Recall-points on PR-chart.
-        // PascalVOC2010–2012 - uses Area-Under-Curve on PR-chart.
+        // PascalVOC2010\962012 - uses Area-Under-Curve on PR-chart.
         // ImageNet - uses Area-Under-Curve on PR-chart.
 
         // correct mAP calculation: ImageNet, PascalVOC 2010-2012
