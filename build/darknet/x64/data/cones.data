@@ -1,0 +1,6 @@
+classes= 2
+train  = build/darknet/x64/data/train_cones.txt
+valid  = build/darknet/x64/data/train_cones.txt
+names = build/darknet/x64/data/cones.names
+backup = build/darknet/x64/backup/
+

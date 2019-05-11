@@ -21,6 +21,20 @@ build/darknet/*
 build_*/
 !build/darknet/YoloWrapper.cs
 
+build/darknet/*
+!build/darknet/x64/
+
+build/darknet/x64/*
+!build/darknet/x64/yolov3-tiny.conv.15
+!build/darknet/x64/yolov3-tiny.weights
+!build/darknet/x64/yolov3-tiny_cones.cfg
+
+!build/darknet/x64/data/
+build/darknet/x64/data/*
+!build/darknet/x64/data/cones.data
+!build/darknet/x64/data/cones.names
+!build/darknet/x64/data/train_cones.txt
+
 .fuse*
 *.weights
 
@@ -40,9 +54,4 @@ include/
 share/
 
 
-!build/darknet/x64/yolov3-tiny.conv.15
-!build/darknet/x64/yolov3-tiny.weights
-!build/darknet/x64/yolov3-tiny_cones.cfg
-!build/darknet/x64/data/cones.data
-!build/darknet/x64/data/cones.names
-!build/darknet/x64/data/train_cones.txt
+
